@@ -1,0 +1,13 @@
+{
+  "name": "Texas Instrument - TRF7970A (SPI)",
+  "apiVersion": "1.0.0",
+  "author": "Benjamin Delpy (@gentilkiwi)",
+  "version": "1.0.0",
+  "description": "High Level Analyzer for Texas Instrument TRF7970A NFC chip on SPI bus",
+  "extensions": {
+    "Texas Instrument - TRF7970A (SPI)": {
+      "type": "HighLevelAnalyzer",
+      "entryPoint": "ti_trf7970a.Hla"
+    }
+  }
+}
