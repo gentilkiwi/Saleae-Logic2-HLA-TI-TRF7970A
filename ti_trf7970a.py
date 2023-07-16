@@ -149,9 +149,10 @@ class Hla(HighLevelAnalyzer):
                
         elif frame.type == 'disable':
 
+            previousState = self.state
             self.state = TRF7970A_DECODER_STATE.START
             
-            if (self.type == TRF7970A_TYPE.Address) and (self.mode == TRF7970A_ADDRESS_MODE.Continuous):
+            if (previousState == TRF7970A_DECODER_STATE.GET_DATA) and (self.type == TRF7970A_TYPE.Address) and (self.mode == TRF7970A_ADDRESS_MODE.Continuous):
 
                 return AnalyzerFrame('Address', self.begin_frame, frame.end_time, {
                     'command': self.address_command,
